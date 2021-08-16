@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class PostModels {
+ 
   final String postId;
   final String ownerId;
   final String location;
@@ -20,6 +21,7 @@ class PostModels {
   });
   factory PostModels.froDocument(DocumentSnapshot doc) {
     return PostModels(
+      ///
       postId: doc["psotId"],
       ownerId: doc["ownerId"],
       location: doc["location"],
